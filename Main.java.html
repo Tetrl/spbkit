@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Main {</span>
+
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s1">String op1 = </span><span class="s2">&quot;+&quot;</span><span class="s0">, </span><span class="s1">op2 = </span><span class="s2">&quot;-&quot;</span><span class="s0">, </span><span class="s1">op3 = </span><span class="s2">&quot;*&quot;</span><span class="s0">, </span><span class="s1">op4 = </span><span class="s2">&quot;/&quot;</span><span class="s0">, </span><span class="s1">op5 = </span><span class="s2">&quot;кв.урав.&quot;</span><span class="s0">;</span>
+        <span class="s1">Scanner in = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+
+        <span class="s3">/////////////////////////////////////////////////////////</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Введите первое число: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">double </span><span class="s1">num1 = in.nextInt()</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Введите второе число: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">double </span><span class="s1">num2 = in.nextInt()</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Введите операцию (+,-,/,*,кв.урав.): &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">String operation = (String)in.next()</span><span class="s0">;</span>
+        <span class="s3">/////////////////////////////////////////////////////////</span>
+
+        <span class="s1">System.out.println(operation)</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(operation.equals(op1)){ </span><span class="s3">// Сложение.</span>
+            <span class="s0">double </span><span class="s1">result = num1 + num2</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Результат сложения: &quot; </span><span class="s1">+ result)</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else</span>
+            <span class="s0">if </span><span class="s1">(operation.equals(op2)){ </span><span class="s3">// Вычитание.</span>
+                <span class="s0">double </span><span class="s1">result = num1 - num2</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Результат вычитания: &quot; </span><span class="s1">+ result)</span><span class="s0">;</span>
+            <span class="s1">} </span><span class="s0">else</span>
+                <span class="s0">if </span><span class="s1">(operation.equals(op3)){ </span><span class="s3">// Умножение.</span>
+                    <span class="s0">double </span><span class="s1">result = num1 * num2</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Результат умножения: &quot; </span><span class="s1">+ result)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else</span>
+                    <span class="s0">if </span><span class="s1">(operation.equals(op4)){ </span><span class="s3">// Деление.</span>
+                        <span class="s0">double </span><span class="s1">result = num1 /  num2</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s2">&quot;Результат деления: &quot; </span><span class="s1">+ result)</span><span class="s0">;</span>
+                    <span class="s1">} </span><span class="s0">else</span>
+                        <span class="s0">if </span><span class="s1">(operation.equals(op5)){ </span><span class="s3">// Квадратное уравнение.</span>
+                            <span class="s1">System.out.println(</span><span class="s2">&quot;Первое(a) и второе(b) числа введены ( &quot; </span><span class="s1">+ num1 + </span><span class="s2">&quot;, &quot; </span><span class="s1">+ num2 + </span><span class="s2">&quot;). Введите третье число(c): &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s0">double </span><span class="s1">num3 = in.nextInt()</span><span class="s0">;</span>
+                            <span class="s0">double </span><span class="s1">d = num2 * num2 - </span><span class="s4">4 </span><span class="s1">* num1 * num3</span><span class="s0">;</span>
+                            <span class="s0">if </span><span class="s1">(d &gt; </span><span class="s4">0</span><span class="s1">){ </span><span class="s3">// Два корня.</span>
+                                <span class="s0">double </span><span class="s1">x1 = (-num2 + Math.sqrt(d)) / (</span><span class="s4">2 </span><span class="s1">* num1)</span><span class="s0">;</span>
+                                <span class="s0">double </span><span class="s1">x2 = (-num2 - Math.sqrt(d)) / (</span><span class="s4">2 </span><span class="s1">* num1)</span><span class="s0">;</span>
+                                <span class="s1">System.out.println(</span><span class="s2">&quot;Корни уравнения: x1= &quot; </span><span class="s1">+ x1 + </span><span class="s2">&quot;, x2= &quot; </span><span class="s1">+ x2)</span><span class="s0">;</span>
+                            <span class="s1">} </span><span class="s0">else</span>
+                                <span class="s0">if </span><span class="s1">(d == </span><span class="s4">0</span><span class="s1">){ </span><span class="s3">// Один корень.</span>
+                                    <span class="s0">double </span><span class="s1">x = -num2 / (</span><span class="s4">2 </span><span class="s1">* num1)</span><span class="s0">;</span>
+                                    <span class="s1">System.out.println(</span><span class="s2">&quot;Корень уравнения x= &quot; </span><span class="s1">+ x)</span><span class="s0">;</span>
+                                <span class="s1">}</span>
+                            <span class="s0">else </span><span class="s1">System.out.println(</span><span class="s2">&quot;Уравнение не имеет корней.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">}</span>
+        <span class="s0">else </span><span class="s1">System.out.println(</span><span class="s2">&quot;Ошибка ввода, попробуйте еще раз.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
