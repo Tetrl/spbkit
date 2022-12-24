@@ -1,0 +1,8 @@
+name: RandomEnter
+version: '${project.version}'
+main: tudrifcastles.plugins.RandomEnter
+api-version: 1.18
+authors: [ tetrl ]
+description: teleport for TRC
+commands:
+  run: {}
